@@ -1,0 +1,42 @@
+:host {
+    display: inline-block;
+    box-sizing: border-box;
+
+    padding: 0;
+    margin: 0;
+    font: 400 13.3333px Arial;
+    color: rgb(0, 0, 0);
+    background: rgb(255, 255, 255);
+    border: 1px solid rgb(127, 127, 127);
+
+    opacity: 1;
+}
+:host([disabled]) {
+    background: grey;
+    pointer-events: none;
+    opacity: 0.4;
+}
+
+.wx-select {
+    display: flex;
+    flex-wrap: nowrap;
+    align-items: stretch;
+    justify-content: space-between;
+
+    &__panel {
+        flex: 1 1 auto;
+    }
+
+    &__actions {
+        flex: 0 0 1%;
+        display: flex;
+        flex-direction: column;
+        flex-wrap: nowrap;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    select {
+        width: 100%;
+    }
+}
